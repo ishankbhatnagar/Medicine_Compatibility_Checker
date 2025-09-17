@@ -24,7 +24,7 @@ Built with **Streamlit** and **Google Gemini API**.
 
    ```bash
    git clone https://github.com/yourusername/Medicine_Compatibility_Checker.git
-   cd medicine-compatibility-checker
+   cd Medicine_Compatibility_Checker
    ```
 
 2. Install dependencies:
@@ -76,3 +76,4 @@ For **educational purposes only**. Always consult a healthcare professional befo
 ## 👨‍💻 Author
 
 [Ishank](https://github.com/ishankbhatnagar)
+
