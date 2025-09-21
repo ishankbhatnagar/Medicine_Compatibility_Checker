@@ -1,6 +1,7 @@
 # 💊 Medicine Compatibility Checker
 
 A **web app** to check if multiple medications can be safely taken together using **AI-powered analysis**.
+You can try it for yourself at- https://medicinecompatibilitychecker.streamlit.app/
 
 ---
 
@@ -76,4 +77,5 @@ For **educational purposes only**. Always consult a healthcare professional befo
 ## 👨‍💻 Author
 
 [Ishank](https://github.com/ishankbhatnagar)
+
 
