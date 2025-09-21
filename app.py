@@ -4,8 +4,9 @@ import warnings
 import json
 import pandas as pd
 import re
+import os
 
-API_KEY = ""  
+API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=API_KEY)
 
 warnings.filterwarnings('ignore')
@@ -114,4 +115,5 @@ if st.button("Check Interactions"):
                 mime="application/json"
             )
     else:
+
         st.error("Please enter at least one medication.")
