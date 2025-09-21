@@ -1,7 +1,7 @@
 # 💊 Medicine Compatibility Checker
 
-A **web app** to check if multiple medications can be safely taken together using **AI-powered analysis**.
-You can try it for yourself at- https://medicinecompatibilitychecker.streamlit.app/
+A **web app** to check if multiple medications can be safely taken together using **AI-powered analysis**.  
+You can try it live at: [https://medicinecompatibilitychecker.streamlit.app/](https://medicinecompatibilitychecker.streamlit.app/)
 
 ---
 
@@ -9,10 +9,10 @@ You can try it for yourself at- https://medicinecompatibilitychecker.streamlit.a
 
 Enter multiple medications to get:
 
-- Potential **drug interactions** with severity (Mild/Moderate/Severe).
-- **Side effects** for each drug.
-- **Overall recommendation** on safety.
-- **References** if available.
+- Potential **drug interactions** with severity (Mild/Moderate/Severe).  
+- **Side effects** for each drug.  
+- **Overall recommendation** on safety.  
+- **References** if available.  
 - Downloadable results in **JSON format**.
 
 Built with **Streamlit** and **Google Gemini API**.
@@ -34,13 +34,8 @@ Built with **Streamlit** and **Google Gemini API**.
    pip install -r requirements.txt
    ```
 
-3. Set your **Google Gemini API key** in `app.py`:
+3. Run the app:
 
-   ```python
-   API_KEY = "YOUR_API_KEY_HERE"
-   ```
-
-4. Run the app:
    ```bash
    streamlit run app.py
    ```
@@ -50,20 +45,24 @@ Built with **Streamlit** and **Google Gemini API**.
 ## ⚡ Example
 
 **Input:**  
-`Dolo 650, Paracetamol`
+`Paracetamol, Montair LC`
 
 **Output:**
 
-- **Overall Recommendation:** Safe with mild monitoring.
-- **Interactions:** Dolo 650 ↔ Paracetamol (Mild), advice: monitor liver.
-- **Side Effects:** Nausea, Dizziness.
+- **Overall Recommendation:** Generally safe, but mild monitoring is advised.  
+- **Individual Interactions:**  
+  - Paracetamol ↔ Montair LC: Mild, advice: monitor for potential minor side effects.  
+- **Side Effects:** Nausea, Dizziness (if any).  
+- **References:** Available links or sources provided by the AI output.  
+
+> If the AI output is malformed, the app will show the **raw output** for review instead of crashing.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** Streamlit
-- **Backend / AI:** Google Gemini API
+- **Frontend:** Streamlit  
+- **Backend / AI:** Google Gemini API  
 - **Data Handling:** Python, Pandas
 
 ---
@@ -76,6 +75,4 @@ For **educational purposes only**. Always consult a healthcare professional befo
 
 ## 👨‍💻 Author
 
-[Ishank](https://github.com/ishankbhatnagar)
-
-
+[Ishank Bhatnagar](https://github.com/ishankbhatnagar)
