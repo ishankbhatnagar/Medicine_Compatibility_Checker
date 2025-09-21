@@ -52,6 +52,7 @@ st.sidebar.info(
 )
 
 st.markdown("<h1 style='color:#4B0082;'>💊 Medicine Compatibility Checker</h1>", unsafe_allow_html=True)
+st.markdown("<p style='color:gray; font-size:12px;'>- Made by Ishank Bhatnagar</p>", unsafe_allow_html=True)
 st.markdown("Check if your medications can be safely taken together and see potential side effects.")
 
 medications_input = st.text_area(
@@ -117,3 +118,4 @@ if st.button("Check Interactions"):
     else:
 
         st.error("Please enter at least one medication.")
+
