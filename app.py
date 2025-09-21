@@ -24,10 +24,7 @@ def get_drug_interactions(medications):
         "1. For each medication, list potential interactions with the other drugs, side effects, severity (Mild/Moderate/Severe), and short advice. "
         "2. Provide an overall conclusion on whether these medications can be safely taken together, including precautions or monitoring needed. "
         "3. Include references if possible. "
-        "Return the response strictly in valid JSON format, without comments or extra text. "
-        "Use this structure:\n"
-        "{ 'Drugs': { 'DrugName': { 'Interactions': [...], 'SideEffects': [...], 'References': [...] } }, "
-        "'OverallRecommendation': '...' }"
+        "Return the response strictly in valid JSON format, without comments or extra text."
     )
 
     try:
@@ -44,12 +41,12 @@ def get_drug_interactions(medications):
         if match:
             json_text = match.group(0)
             try:
-                parsed = json.loads(json_text)
-                return parsed
-            except Exception as e:
-                return {"Error": f"Failed to parse JSON: {e}. Raw output: {raw_text}"}
+                return json.loads(json_text)
+            except Exception:
+                return {"Error": "Model returned malformed JSON. Raw output:", "RawOutput": raw_text}
         else:
-            return {"Error": "No JSON found in model output. Raw output: " + raw_text}
+            return {"Error": "No JSON found in model output.", "RawOutput": raw_text}
+
     except Exception as e:
         return {"Error": f"API call failed: {e}"}
 
@@ -127,3 +124,4 @@ if st.button("Check Interactions"):
             )
     else:
         st.error("Please enter at least one medication.")
+
